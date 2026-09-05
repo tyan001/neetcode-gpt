@@ -11,7 +11,7 @@ class Solution:
 
         z = z - np.max(z)
         
-        z_exp = np.round(np.exp(z),5)
+        z_exp = np.exp(z)
         prob = z_exp / np.sum(z_exp)
         
         return np.round(prob,4)
