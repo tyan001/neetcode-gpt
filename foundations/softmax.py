@@ -9,9 +9,5 @@ class Solution:
         # Hint: subtract max(z) for numerical stability before computing exp
         # return np.round(your_answer, 4)
 
-        z = z - np.max(z)
-        
-        z_exp = np.exp(z)
-        prob = z_exp / np.sum(z_exp)
-        
+        prob = np.exp(z - np.max(z)) / np.sum(np.exp(z-np.max(z)))
         return np.round(prob,4)
